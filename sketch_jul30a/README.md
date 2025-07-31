@@ -42,10 +42,10 @@ Arduino Library Manager:
 
 ## Notes
 
-#define LED_BUILTIN 8 
-    ESP32-C3-SuperMini inbuild LED
-#define ONE_WIRE_BUS 3
-    DallasTemperature Sensor installed to GPIO3 
+- #define LED_BUILTIN 8 
+  - ESP32-C3-SuperMini inbuild LED
+- #define ONE_WIRE_BUS 3
+  - DallasTemperature Sensor installed to GPIO3 
 
 
 In code, adjust as needed:
@@ -55,9 +55,11 @@ void waitTemperature() {
   tempC = sensors.getTempCByIndex(0);
 
   uint64_t sleepMinutes;
-  if (tempC >= 20.0 && tempC <= 80.0) { // Adjust if needed
+  if (tempC >= 20.0 && tempC <= 80.0) { // Adjust as needed
     sleepMinutes = 1;  // Rising temperature, short sleep. Adjust as needed.
   } else {
     sleepMinutes = 10; // Normal temperature, longer sleep. Adjust as needed.
   }
 ```
+
+Sensor has -127°C and 85°C as error values. These temperatures fall outside of monitoring.
