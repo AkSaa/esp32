@@ -13,8 +13,6 @@ ESP32 temperature sensor for the Sauna, MQTT publish to Home Assistant with auto
 - AsyncMQTT_ESP32.h
 - arduino_secrets.h
 - Preferences.h
-- OneWire
-- DallasTemperature
 
 ## How to Install Libraries
 
@@ -43,10 +41,9 @@ Arduino Library Manager:
 ## Notes
 
 - #define LED_BUILTIN 8 
-  - ESP32-C3-SuperMini inbuild LED
+  - ESP32 C3 Super Mini inbuild LED
 - #define ONE_WIRE_BUS 3
   - DallasTemperature Sensor installed to GPIO3 
-
 
 In code, adjust as needed:
 ```
