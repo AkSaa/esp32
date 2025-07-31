@@ -57,6 +57,9 @@ void waitTemperature() {
   } else {
     sleepMinutes = 10; // Normal temperature, longer sleep. Adjust as needed.
   }
+  ...
+}
+
 ```
 
 Sensor has -127°C and 85°C as error values. These temperatures fall outside of monitoring.
